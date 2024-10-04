@@ -1,21 +1,31 @@
 import React from 'react';
+import RootLayout from './pages/Root';    // Ensure this path is correct
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-// import GalleryPage from './pages/GalleryPage';
-import ImageUploader, { action as imageUploadAction } from './components/ImageUploader';
-import VideoGenerator, { videoGenerateAction } from './components/VideoGenerator';
+import GalleryPage from './pages/GalleryPage';
+import Home from './pages/Home';
+
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <ImageUploader />,
-    action: imageUploadAction,
+    element: <RootLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: 'gallery',
+        element: <GalleryPage />,
+      },
+      {
+        path: 'generate-video',
+      },
+    ],
   },
-  {
-    path: '/',
-    element: <VideoGenerator />,
-    action: videoGenerateAction,
-  }
 ]);
+
+
 
 function App() {
   return (

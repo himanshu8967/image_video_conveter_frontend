@@ -13,7 +13,7 @@ const Navbar = () => {
         >
           <FiHome className="mr-2" /> ImageSlideshow
         </Link>
-        
+
         {/* Gallery Link */}
         <ul className="flex space-x-8">
           <li>
