@@ -1,6 +1,9 @@
  To run the code on local server or local host we have to do following step.
+
     1. Download he code from github
+
     2. In VS STUDIO , open the terminal. Run the command npm install to install all the packages.
+    
     3. Then run the command npm run dev , to run the locally on your browser.
 
 
